@@ -19,7 +19,7 @@
         "name": "HTTP-GROUP"
     }],
     "ansible-configuration": {
-        "source-url": "https://github.com/tasankulov/subutai-blueprint-jenkins/archive/master.zip",
+        "source-url": "https://github.com/bkukanov/subutai-blueprint-jenkins/archive/master.zip",
         "ansible-playbook": "main.yml",
         "extra-vars": [{
             "key": "admin_user_pass",
