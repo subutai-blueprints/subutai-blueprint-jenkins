@@ -18,16 +18,20 @@
         - default-jre
         - ca-certificates
 
- #   - name: Add an Apt signing key
- #     apt_key:
- #       url: https://pkg.jenkins.io/debian/jenkins.io.key
- #       state: present
+    - name: Enable universe repository
+      apt_repository:
+        repo: universe
+        
+    - name: Add an Apt signing key
+      apt_key:
+        url: https://pkg.jenkins.io/debian/jenkins.io.key
+        state: present
 
-#    - name: Add jenkins repository
-#      apt_repository:
-#        repo: deb http://pkg.jenkins.io/debian-stable binary/
-#        state: present
-#        update_cache: true
+    - name: Add jenkins repository
+      apt_repository:
+        repo: deb http://pkg.jenkins.io/debian-stable binary/
+        state: present
+        update_cache: true
 
 #    - name: Install jenkins
 #      apt: 
@@ -38,6 +42,7 @@
     - name: Install a jenkins 2.222.1.deb package from the internet.
       apt:
         deb: https://pkg.jenkins.io/debian-stable/binary/jenkins_2.222.1_all.deb
+        https://pkg.jenkins.io/debian-stable/binary/jenkins_2.222.1_all.deb
 
     - name: Wait until the file "initialAdminPassword" is present before continuing
       wait_for:
