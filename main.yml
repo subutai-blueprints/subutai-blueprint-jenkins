@@ -17,26 +17,18 @@
         packages:
         - default-jre
         - ca-certificates
+        - xz-utils
+     
+#    - name: Add an Apt signing key
+#      apt_key:
+#        url: https://pkg.jenkins.io/debian/jenkins.io.key
+#        state: present
 
-    - name: Download foo.conf
-      get_url:
-        url: https://pkg.jenkins.io/debian-stable/binary/jenkins_2.222.1_all.deb
-        dest: /tmp/jenkins_2.222.1_all.deb
-   
-    - name: Install a .deb package
-      apt:
-        deb: /tmp/jenkins_2.222.1_all.deb
-        
-    - name: Add an Apt signing key
-      apt_key:
-        url: https://pkg.jenkins.io/debian/jenkins.io.key
-        state: present
-
-    - name: Add jenkins repository
-      apt_repository:
-        repo: deb http://pkg.jenkins.io/debian-stable binary/
-        state: present
-        update_cache: true
+#    - name: Add jenkins repository
+#      apt_repository:
+#        repo: deb http://pkg.jenkins.io/debian-stable binary/
+#        state: present
+#        update_cache: true
 
 #    - name: Install jenkins
 #      apt: 
