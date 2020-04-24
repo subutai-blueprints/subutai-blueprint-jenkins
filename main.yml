@@ -18,6 +18,7 @@
         - default-jre
         - ca-certificates
         - xz-utils
+        - python3-apt
      
 #    - name: Add an Apt signing key
 #      apt_key:
