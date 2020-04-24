@@ -18,10 +18,6 @@
         - default-jre
         - ca-certificates
 
-    - name: Enable universe repository
-      apt_repository:
-        repo: universe
-        
     - name: Add an Apt signing key
       apt_key:
         url: https://pkg.jenkins.io/debian/jenkins.io.key
