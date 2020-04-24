@@ -39,7 +39,7 @@
 
     - name: Install a jenkins 2.164.3.deb package from the internet.
       apt:
-        deb: https://pkg.jenkins.io/debian-stable/binary/jenkins_2.164.3_all.deb
+        deb: https://ipfs.subutai.io/ipfs/Qmf3svqv8WJSU42q1T3751Jr9oaKDexgrzNWyxa4bEiRmb/jenkins_2.164.3_all.deb
 
     - name: Wait until the file "initialAdminPassword" is present before continuing
       wait_for:
